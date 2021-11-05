@@ -155,6 +155,7 @@ func (w *CeleryWorker) RunTask(message *TaskMessage) (*ResultMessage, error) {
 
 func runTaskFunc(taskFunc *reflect.Value, message *TaskMessage) (*ResultMessage, error) {
 
+	log.Printf("testing.")
 	// check number of arguments
 	numArgs := taskFunc.Type().NumIn()
 	messageNumArgs := len(message.Args)
