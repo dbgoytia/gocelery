@@ -185,5 +185,6 @@ func runTaskFunc(taskFunc *reflect.Value, message *TaskMessage) (*ResultMessage,
 		return nil, nil
 	}
 
+	fmt.Println(res)
 	return getReflectionResultMessage(&res[0]), nil
 }
